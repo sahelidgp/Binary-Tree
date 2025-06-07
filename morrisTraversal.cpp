@@ -84,6 +84,7 @@ vector<int>morrisPreorder(TreeNode* root){
     return ans;
     
 }
+
 // post order means [left->right->node]
 // so we will do in reverse [node->right->left] just like preOrder
 // after that we will return the reverse vector
