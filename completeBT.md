@@ -1,4 +1,6 @@
-# Number of Nodes Complete Binary Tree
+# Number of Nodes Complete Binary Tree 🔥
+# (づ｡◕‿‿◕｡)づ ❤️
+
 
 ## explanation
 ## 🔥 What's actually happening in the code?
@@ -65,9 +67,7 @@ public:
 🌳 Example:
 For this tree:
 
-markdown
-Copy
-Edit
+
         1
        / \
       2   3
@@ -96,6 +96,7 @@ This lets us efficiently determine the node count in O(log² N) time.
 
 Thanks for pointing that out. You're clearly understanding the d
 
+# CODE
  ```c++
  struct TreeNode{
     int val;
@@ -138,6 +139,7 @@ public:
 
 ```
 # Another method O(log^2 N)
+# CODE
 ```c++
 class Solution {
 public:
