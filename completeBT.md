@@ -1,7 +1,8 @@
 # Number of Nodes Complete Binary Tree 🔥
 # (づ｡◕‿‿◕｡)づ ❤️
 
-
+## problem link :
+ [click here](https://leetcode.com/problems/count-complete-tree-nodes/)
 ## explanation
 ## 🔥 What's actually happening in the code?
 We're not building a heap or an actual array.
