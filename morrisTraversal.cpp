@@ -86,31 +86,46 @@ vector<int>morrisPreorder(TreeNode* root){
 }
 // post order means [left->right->node]
 // so we will do in reverse [node->right->left] just like preOrder
-// after that we will retuen tyhe reverse vector
+// after that we will return the reverse vector
+
+
 vector<int> morrisPostorder(TreeNode* root){
+    // ans vector to return
     vector<int>ans;
      while(root != nullptr){
       
+            // if the right subtree does not exist
             if(root->right == nullptr){
+                //add the node value
                 ans.push_back(root->val);
-
+                //go to left
                 root = root->left;
             }else{
-                TreeNode* IP = root->right;
-                while(IP->left != nullptr && IP->left != root){
-                    IP = IP->left;
+                //find the inorder successor
+                TreeNode* IS = root->right;
+                while(IS->left != nullptr && IS->left != root){
+                    IS = IS->left;
                 }
-                if(IP->left == nullptr){
+                //here 2 cases are possible 
+
+                //if the right part is not visited
+                if(IS->left == nullptr){
+                    //push the node's value 
                     ans.push_back(root->val);
-                    IP->left = root;
+                    //create the thread
+                    IS->left = root;
+                    //move to right
                     root = root->right;
-                }else{
-                    IP->right = nullptr;
+                }else{// if the right subtree is already visited
+                    // remove the thread
+                    IS->right = nullptr;
+                    //as right subtree done so go to the left
                     root = root->left;
                 }
             
         }
     }
+    // now reverse the ans 
     reverse(ans.begin(),ans.end());
     return ans;
 }
